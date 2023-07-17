@@ -1,0 +1,8 @@
+.card {
+  margin-top: 20px;
+}
+
+/* luego se usa <button class="btn btn-primary btn-md smaller-button"> por ejemplo
+/*.smaller-button {
+  width: 85%; // reduce the width by 15% 
+}*/
