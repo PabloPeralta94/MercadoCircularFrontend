@@ -1,0 +1,18 @@
+<div class="login-container">
+    <h2>Ingresa aqui</h2>
+    <form (ngSubmit)="onLoginSubmit()">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Ingresa tu email" [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="clave" name="clave" required>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Ingresar</button>
+    </form>
+    
+  </div>
+  
