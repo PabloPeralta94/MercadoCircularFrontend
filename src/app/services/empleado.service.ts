@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Empleado } from './empleado';
+import { Empleado } from '../interfaces/empleado';
 import { environment } from 'src/environments/environment';
 
 @Injectable({providedIn: 'root'}) // así, provided root o voy a app.module.ts 

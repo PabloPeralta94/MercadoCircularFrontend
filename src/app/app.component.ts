@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core'; // importado para OnInit
 import { NgForm } from '@angular/forms'; // importado para poder usar forms
-import { Empleado } from './empleado';
-import { EmpleadoService } from './empleado.service';
+import { Empleado } from './interfaces/empleado';
+import { EmpleadoService } from './services/empleado.service';
 
 @Component({
   selector: 'main-component',
