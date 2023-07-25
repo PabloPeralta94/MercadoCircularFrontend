@@ -5,6 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LandingModule } from './landing/landing.module';
+import { AuthModule } from './auth/auth.module';
+import { ToastrModule } from 'ngx-toastr/public_api';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule // necesario para usar forms
+    FormsModule,
+    LandingModule,
+    AuthModule,
+    ToastrModule.forRoot()  
   ],
   providers: [],
   bootstrap: [AppComponent]
