@@ -3,8 +3,6 @@ import { TokenService } from '../../services/token.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Route, Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/interfaces/login-usuario';
-import { ToastrService } from 'ngx-toastr';
-
 
 @Component({
   selector: 'app-login',
@@ -24,8 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private tokenService: TokenService,
     private authService: AuthService,
-    private router: Router,
-    private toastr: ToastrService
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -46,18 +43,14 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.toastr.success('Bienvenido ' + data.nombreUsuario, 'OK', {
-          timeOut: 3000, positionClass: 'toast-top-center'
-        });
+        console.log('Bienvenido ' + data.nombreUsuario); // Log success message
         this.router.navigate(['/']);
       },
       err => {
         this.isLogged = false;
         this.errMsj = err.error.message;
-        this.toastr.error(this.errMsj, 'Fail', {
-          timeOut: 3000,  positionClass: 'toast-top-center',
-        });
-        // console.log(err.error.message);
+        console.error(this.errMsj); // Log error message
+        this.router.navigate(['/']);
       }
     );
   }

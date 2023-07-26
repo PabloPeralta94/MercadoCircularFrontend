@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingModule } from './landing/landing.module';
 import { AuthModule } from './auth/auth.module';
-import { ToastrModule } from 'ngx-toastr/public_api';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { ToastrModule } from 'ngx-toastr/public_api';
     HttpClientModule,
     FormsModule,
     LandingModule,
-    AuthModule,
-    ToastrModule.forRoot()  
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
