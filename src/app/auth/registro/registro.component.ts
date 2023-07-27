@@ -17,7 +17,6 @@ export class RegistroComponent implements OnInit {
   email: string;
   password: string;
   errMsj: string;
-  isLogged = false;
 
   constructor(
     private tokenService: TokenService,
@@ -26,11 +25,9 @@ export class RegistroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    }
   }
 
+  
   onRegister(): void {
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(

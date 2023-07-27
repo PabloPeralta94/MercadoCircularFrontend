@@ -13,8 +13,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class PantallaEmpleadosComponent implements OnInit {
   public empleados: Empleado[] = [];
   public editarEmpleado: Empleado = this.getDefaultEmpleado();
-  public borrarEmpleado: Empleado = this.getDefaultEmpleado();
-  roles: string[];
+  public borrarEmpleado: Empleado = this.getDefaultEmpleado();  
   isAdmin = false;
 
   constructor(
@@ -24,12 +23,7 @@ export class PantallaEmpleadosComponent implements OnInit {
 
   ngOnInit() { // al iniciarse llama getEmpleados
     this.getEmpleados();
-    this.roles = this.tokenService.getAuthorities();
-    this.roles.forEach(rol => {
-      if (rol === 'ROLE_ADMIN') {
-        this.isAdmin = true;
-      }
-    });
+    this.isAdmin = this.tokenService.isAdmin();
   }
 
   public getEmpleados(): void {

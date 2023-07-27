@@ -5,11 +5,12 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { PantallaEmpleadosComponent } from './empleados/pantalla-empleados/pantalla-empleados.component';
 import { ProdGuardService as guard } from './guards/emp-guard.service';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent},
+  {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
+  {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }}
   
 
