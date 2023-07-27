@@ -10,6 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { EmpleadosModule } from './empleados/empleados.module';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { interceptorProvider } from './interceptors/emp-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SharedModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

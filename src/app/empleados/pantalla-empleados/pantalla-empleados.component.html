@@ -42,8 +42,8 @@
                   </ul>
                   <div class="card-body">
                       <div class="float-right btn-group btn-group-sm">
-                          <a (click)="onOpenModal(empleado, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-                          <a (click)="onOpenModal(empleado, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                          <a (click)="onOpenModal(empleado, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit" *ngIf="isAdmin"><i class="fa fa-pencil" ></i> </a>
+                          <a (click)="onOpenModal(empleado, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete" *ngIf="isAdmin"><i class="fa fa-times"></i></a>
                       </div>
                       <!-- dejar de ejemplo en caso de que quiera agregar 3 botones seguidos -->
                       <!--
@@ -111,7 +111,7 @@
   
   <!-- Editar Empleado -->
   <div class="modal fade" id="updateEmpleadoModal" tabindex="-1" role="dialog" 
-     aria-labelledby="empleadoEditModalLabel" aria-hidden="true">
+     aria-labelledby="empleadoEditModalLabel" aria-hidden="true" >
      <div class="modal-dialog" role="document">
         <div class="modal-content">
            <div class="modal-header">

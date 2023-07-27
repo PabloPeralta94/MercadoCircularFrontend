@@ -3,6 +3,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Empleado } from 'src/app/interfaces/empleado';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 import { NgForm } from '@angular/forms';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-pantalla-empleados',
@@ -13,11 +14,22 @@ export class PantallaEmpleadosComponent implements OnInit {
   public empleados: Empleado[] = [];
   public editarEmpleado: Empleado = this.getDefaultEmpleado();
   public borrarEmpleado: Empleado = this.getDefaultEmpleado();
+  roles: string[];
+  isAdmin = false;
 
-  constructor(private empleadoService: EmpleadoService){}
+  constructor(
+    private empleadoService: EmpleadoService,
+    private tokenService: TokenService
+    ){}
 
   ngOnInit() { // al iniciarse llama getEmpleados
     this.getEmpleados();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   public getEmpleados(): void {
