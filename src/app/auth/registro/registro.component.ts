@@ -27,17 +27,17 @@ export class RegistroComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
   onRegister(): void {
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
       data => {
-        console.log('Cuenta Creada'); // Log success message
-        this.router.navigate(['/login']);
+        console.log('Cuenta Creada');
+        this.router.navigate(['/']);
       },
       err => {
         this.errMsj = err.error.mensaje;
-        console.error(this.errMsj); // Log error message
+        console.error(this.errMsj);
         this.router.navigate(['/']);
       }
     );

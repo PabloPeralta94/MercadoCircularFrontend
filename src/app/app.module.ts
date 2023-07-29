@@ -11,6 +11,7 @@ import { EmpleadosModule } from './empleados/empleados.module';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { interceptorProvider } from './interceptors/emp-interceptor.service';
+import { MainAppModule } from './main-app/main-app.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { interceptorProvider } from './interceptors/emp-interceptor.service';
     AuthModule,
     EmpleadosModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MainAppModule    
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
