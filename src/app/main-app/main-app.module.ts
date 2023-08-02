@@ -7,6 +7,8 @@ import { AmigosComponent } from './amigos/amigos.component';
 import { ChatComponent } from './chat/chat.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { PostComponent } from './feed/post/post.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,11 +19,13 @@ import { SharedModule } from '../shared/shared.module';
     FeedComponent,
     AmigosComponent,
     ChatComponent,
+    PostComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class MainAppModule { }

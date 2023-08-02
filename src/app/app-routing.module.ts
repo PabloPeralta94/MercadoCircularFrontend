@@ -7,13 +7,17 @@ import { PantallaEmpleadosComponent } from './empleados/pantalla-empleados/panta
 import { ProdGuardService as guard } from './guards/emp-guard.service';
 import { LoginGuard } from './guards/login.guard';
 import { InicioComponent } from './main-app/inicio/inicio.component';
+import { PostComponent } from './main-app/feed/post/post.component';
+import { FeedComponent } from './main-app/feed/feed.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, canActivate: [LoginGuard]},
   {path: 'landing', component: InicioComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
-  {path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }}
+  {path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
+  {path: 'post', component: PostComponent},
+  {path: 'feed', component: FeedComponent}
   
 
 ];

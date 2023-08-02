@@ -1,1 +1,38 @@
-<p>feed works!</p>
+<div class="feed">
+
+
+
+<div class="col-md-6 col-xl-2">
+    <app-post></app-post>
+</div>
+<div class="col-md-6 col-xl-8">
+    <div class="postear">
+        <div class="card bg-dark ">
+        <div class="card-header text">  
+        <h2>Contanos que pescaste.</h2>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()">          
+            <div class="form-group text">
+            <label for="post_title">Titulo</label> 
+              <input id="post_title" type="text" class="validate form-control" [(ngModel)]="postTitle">
+                         
+          </div>          
+            <div class="form-group text">
+            <label for="post_body">Texto</label> 
+              <textarea id="post_body" class="materialize-textarea form-control" [(ngModel)]="postBody"></textarea>
+                         
+          </div>          
+            <div class="form-group text">
+              <button class="btn btn-outline-success btn-block text" type="submit"><i class="fas fa-sign-in-alt"></i>Publicar</button>
+            </div>          
+        </form>
+    </div>
+    </div>
+      </div>
+    <app-post></app-post>
+</div>
+<div class="col-md-6 col-xl-2">
+    <app-post></app-post>
+</div>
+</div>
