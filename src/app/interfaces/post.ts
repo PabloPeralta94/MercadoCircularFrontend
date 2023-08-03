@@ -1,5 +1,5 @@
 export class post {
-    postId: number;
+    postId?: number;
     title: string;
     text: string;
 }

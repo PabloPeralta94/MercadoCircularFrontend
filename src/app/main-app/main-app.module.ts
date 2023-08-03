@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { PostComponent } from './feed/post/post.component';
 import { FormsModule } from '@angular/forms';
+import { CrearPostComponent } from './feed/crear-post/crear-post.component';
 
 
 
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     AmigosComponent,
     ChatComponent,
     PostComponent,
+    CrearPostComponent,
   ],
   imports: [
     CommonModule,

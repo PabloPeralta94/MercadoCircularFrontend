@@ -13,6 +13,10 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   public getPosts(): Observable<post[]> {
-    return this.http.get<post[]>(`${this.postURL}/allpost`);
+    return this.http.get<post[]>(`${this.postURL}`);
+  }
+
+  public createPost(post: post): Observable<post> {
+    return this.http.post<post>(`${this.postURL}/byUser`, post);
   }
 }
