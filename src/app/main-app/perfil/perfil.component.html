@@ -1,1 +1,19 @@
-<p>perfil works!</p>
+<app-menu></app-menu>
+<app-crear-post></app-crear-post>
+<div *ngFor="let post of userPosts">
+    <div class="card  rounded border-dark post">
+       <img src="../../../assets/pesca.jpg" class="card-img" alt="un pescador">
+       <div class="card-img-overlay text-center">
+          <h4 class="card-title text-capitalize font-weight-bold">{{post.title}}</h4>
+          <br>
+          <br>
+          <br>
+          <p class="card-body font-weight-normal">{{post.text}}</p> 
+          <br>
+          <br>
+          <br>               
+     <p class="card-footer font-italic font-weight-bold text-capitalize"><small>Creado por {{post.nombreUsuario}}</small></p>
+       </div>
+    </div>
+ </div>
+ 

@@ -14,20 +14,18 @@ export class CrearPostComponent {
   constructor(private postService: PostService) { }
 
   onSubmit() {
-
     const post: post = {
       title: this.postTitle,
       text: this.postBody
     };
 
-
     this.postService.createPost(post).subscribe(
       (createdPost) => {
         console.log('Created Post:', createdPost);
-
-
         this.postTitle = '';
         this.postBody = '';
+        this.postService.emitPostCreated();
+         
       },
       (error) => {
         console.error('Error creating post:', error);

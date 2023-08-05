@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { post } from '../interfaces/post';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
   postURL = environment.postURL;
+  private postCreatedSource = new Subject<void>();
 
   constructor(private http: HttpClient) { }
 
@@ -19,4 +20,16 @@ export class PostService {
   public createPost(post: post): Observable<post> {
     return this.http.post<post>(`${this.postURL}/byUser`, post);
   }
+
+  public getUserPosts(nombreUsuario: string): Observable<post[]> {
+    return this.http.get<post[]>(`${this.postURL}/byUser?nombreUsuario=${nombreUsuario}`);
+  }
+
+  // Method to emit the post created event
+  emitPostCreated() {
+    this.postCreatedSource.next();
+  }
+
+  // Observable to subscribe to the post created event
+  postCreated$ = this.postCreatedSource.asObservable();
 }

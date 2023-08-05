@@ -22,4 +22,8 @@ export class MenuComponent implements OnInit {
     this.tokenService.logOut();
   }
 
+  get getTokenService(): TokenService {
+    return this.tokenService;
+  }
+
 }

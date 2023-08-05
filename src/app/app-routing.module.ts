@@ -9,18 +9,18 @@ import { LoginGuard } from './guards/login.guard';
 import { InicioComponent } from './main-app/inicio/inicio.component';
 import { PostComponent } from './main-app/feed/post/post.component';
 import { FeedComponent } from './main-app/feed/feed.component';
+import { PerfilComponent } from './main-app/perfil/perfil.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, canActivate: [LoginGuard]},
-  {path: 'landing', component: InicioComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user']}},
+  {path: 'landing', component: FeedComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
-  {path: 'post', component: PostComponent},
-  {path: 'feed', component: FeedComponent}
-  
+  {path: 'perfil/:nombreUsuario', component: PerfilComponent }  
 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { PostComponent } from './feed/post/post.component';
 import { FormsModule } from '@angular/forms';
 import { CrearPostComponent } from './feed/crear-post/crear-post.component';
+import { BarraLatIzqComponent } from './feed/barra-lat-izq/barra-lat-izq.component';
+import { UserPostComponent } from './feed/user-post/user-post.component';
 
 
 
@@ -22,6 +24,8 @@ import { CrearPostComponent } from './feed/crear-post/crear-post.component';
     ChatComponent,
     PostComponent,
     CrearPostComponent,
+    BarraLatIzqComponent,
+    UserPostComponent,
   ],
   imports: [
     CommonModule,
