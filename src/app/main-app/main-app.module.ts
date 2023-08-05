@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { CrearPostComponent } from './feed/crear-post/crear-post.component';
 import { BarraLatIzqComponent } from './feed/barra-lat-izq/barra-lat-izq.component';
 import { UserPostComponent } from './feed/user-post/user-post.component';
+import { MiPerfilComponent } from './perfil/mi-perfil/mi-perfil.component';
 
 
 
@@ -26,6 +27,7 @@ import { UserPostComponent } from './feed/user-post/user-post.component';
     CrearPostComponent,
     BarraLatIzqComponent,
     UserPostComponent,
+    MiPerfilComponent,
   ],
   imports: [
     CommonModule,
