@@ -1,1 +1,7 @@
-<p>amigos works!</p>
+<h2>My Friends List</h2>
+<div *ngIf="friends.length === 0">You don't have any friends yet.</div>
+<ul *ngIf="friends.length > 0">
+  <li *ngFor="let friend of friends">
+    {{ friend.nombreUsuario }}
+  </li>
+</ul>

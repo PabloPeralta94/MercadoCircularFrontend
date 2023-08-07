@@ -11,6 +11,7 @@ import { PostComponent } from './main-app/feed/post/post.component';
 import { FeedComponent } from './main-app/feed/feed.component';
 import { PerfilComponent } from './main-app/perfil/perfil.component';
 import { MiPerfilComponent } from './main-app/perfil/mi-perfil/mi-perfil.component';
+import { AmigosComponent } from './main-app/amigos/amigos.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, canActivate: [LoginGuard]},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
   {path: 'perfil/:nombreUsuario', component: PerfilComponent },
-  {path: 'perfil', component: MiPerfilComponent}  
+  {path: 'perfil', component: MiPerfilComponent},
+  {path: 'amigos', component: AmigosComponent}  
 
 ];
 

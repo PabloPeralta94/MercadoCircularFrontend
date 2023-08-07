@@ -13,6 +13,7 @@ import { CrearPostComponent } from './feed/crear-post/crear-post.component';
 import { BarraLatIzqComponent } from './feed/barra-lat-izq/barra-lat-izq.component';
 import { UserPostComponent } from './feed/user-post/user-post.component';
 import { MiPerfilComponent } from './perfil/mi-perfil/mi-perfil.component';
+import { SolicitudesComponent } from './amigos/solicitudes/solicitudes.component';
 
 
 
@@ -28,6 +29,7 @@ import { MiPerfilComponent } from './perfil/mi-perfil/mi-perfil.component';
     BarraLatIzqComponent,
     UserPostComponent,
     MiPerfilComponent,
+    SolicitudesComponent,
   ],
   imports: [
     CommonModule,

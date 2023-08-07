@@ -1,0 +1,7 @@
+<h2>Received Friend Requests</h2>
+<div *ngIf="friendRequests.length === 0">No friend requests received.</div>
+<ul *ngIf="friendRequests.length > 0">
+  <li *ngFor="let request of friendRequests">
+    <span>{{ request.id }}</span> - <span>{{ request.nombreUsuario }}</span>
+  </li>
+</ul>
