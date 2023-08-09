@@ -1,7 +1,8 @@
-<h2>My Friends List</h2>
-<div *ngIf="friends.length === 0">You don't have any friends yet.</div>
+<h2>Amigos</h2>
+<div *ngIf="friends.length === 0">No tienes ningun amigo, prueba añadir algunos!.</div>
 <ul *ngIf="friends.length > 0">
   <li *ngFor="let friend of friends">
+    <img src="../../../assets/perfil.jpg" class="card-img" alt="un pescador">
     {{ friend.nombreUsuario }}
   </li>
 </ul>

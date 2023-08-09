@@ -26,4 +26,15 @@ export class SolicitudesComponent implements OnInit {
       }
     );
   }
+  aceptarRequest(requestId: number): void {
+    this.friendService.acceptFriendRequest(requestId).subscribe(
+      (response: string) => {
+        console.log('Request accepted:', response);
+        this.friendRequests = this.friendRequests.filter(request => request.id !== requestId);
+      },
+      (error) => {
+        console.error('Error accepting friend request:', error);
+      }
+    );
+  }
 }

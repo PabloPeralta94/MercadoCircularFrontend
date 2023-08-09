@@ -2,6 +2,8 @@
 <div *ngIf="friendRequests.length === 0">No friend requests received.</div>
 <ul *ngIf="friendRequests.length > 0">
   <li *ngFor="let request of friendRequests">
+    <img src="../../../assets/perfil.jpg" class="card-img" alt="un pescador">
     <span>{{ request.id }}</span> - <span>{{ request.nombreUsuario }}</span>
+    <button (click)="aceptarRequest(request.id)">Aceptar</button>
   </li>
 </ul>
