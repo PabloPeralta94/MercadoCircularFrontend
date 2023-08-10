@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { post } from 'src/app/interfaces/post';
+import { FriendService } from 'src/app/services/friend.service';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class PerfilComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private postService: PostService // Replace 'PostService' with your actual post service
+    private postService: PostService,
+    private friendService: FriendService
   ) {}
 
   ngOnInit() {
@@ -38,6 +40,19 @@ export class PerfilComponent {
       },
       (error) => {
         console.error('Error fetching user posts:', error);
+      }
+    );
+  }
+
+  sendFriendRequest() {
+    this.friendService.sendFriendRequest(this.nombreUsuario).subscribe(
+      (response) => {
+        // Handle the success response
+        console.log('Friend request sent successfully:', response);
+      },
+      (error) => {
+        // Handle the error
+        console.error('Error sending friend request:', error);
       }
     );
   }

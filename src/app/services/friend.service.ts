@@ -13,12 +13,12 @@ export class FriendService {
   constructor(private http: HttpClient) {}
 
   // Send a friend request to a user with the given friendId
-  sendFriendRequest(friendId: number): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}/send-request/${friendId}`, null);
+  sendFriendRequest(nombreUsuario: string): Observable<any> {
+    return this.http.post<string>(`${this.apiUrl}/send-request/${nombreUsuario}`, null);
   }
 
   // Accept a friend request from a user with the given senderId
-  acceptFriendRequest(senderId: number): Observable<string> {
+  acceptFriendRequest(senderId: number): Observable<any> {
     return this.http.post<string>(`${this.apiUrl}/accept-request/${senderId}`, null);
   }
 
