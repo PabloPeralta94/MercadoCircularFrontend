@@ -19,7 +19,7 @@ export class PerfilComponent {
     private route: ActivatedRoute,
     private postService: PostService,
     private friendService: FriendService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
@@ -30,7 +30,7 @@ export class PerfilComponent {
     this.postCreatedSubscription = this.postService.postCreated$.subscribe(() => {
       this.fetchUserPosts();
     });
-    
+
   }
 
   fetchUserPosts() {
@@ -47,11 +47,9 @@ export class PerfilComponent {
   sendFriendRequest() {
     this.friendService.sendFriendRequest(this.nombreUsuario).subscribe(
       (response) => {
-        // Handle the success response
         console.log('Friend request sent successfully:', response);
       },
       (error) => {
-        // Handle the error
         console.error('Error sending friend request:', error);
       }
     );

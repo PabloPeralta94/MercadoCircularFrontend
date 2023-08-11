@@ -23,13 +23,10 @@ export class PostService {
 
   public getUserPosts(nombreUsuario: string): Observable<post[]> {
     return this.http.get<post[]>(`${this.postURL}/byUser?nombreUsuario=${nombreUsuario}`);
-  }
-
-  // Method to emit the post created event
+  }  
   emitPostCreated() {
     this.postCreatedSource.next();
   }
-
-  // Observable to subscribe to the post created event
+  
   postCreated$ = this.postCreatedSource.asObservable();
 }

@@ -10,7 +10,7 @@ import { FriendService } from 'src/app/services/friend.service';
 export class SolicitudesComponent implements OnInit {
   friendRequests: FriendRequestDTO[] = [];
 
-  constructor(private friendService: FriendService) {}
+  constructor(private friendService: FriendService) { }
 
   ngOnInit(): void {
     this.getReceivedFriendRequests();

@@ -14,14 +14,14 @@ import { MiPerfilComponent } from './main-app/perfil/mi-perfil/mi-perfil.compone
 import { AmigosComponent } from './main-app/amigos/amigos.component';
 
 const routes: Routes = [
-  {path: '', component: MainComponent, canActivate: [LoginGuard]},
-  {path: 'landing', component: FeedComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
-  {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
-  {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
-  {path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
-  {path: 'perfil/:nombreUsuario', component: PerfilComponent },
-  {path: 'perfil', component: MiPerfilComponent},
-  {path: 'amigos', component: AmigosComponent}  
+  { path: '', component: MainComponent, canActivate: [LoginGuard] },
+  { path: 'landing', component: FeedComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
+  { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
+  { path: 'registro', component: RegistroComponent, canActivate: [LoginGuard] },
+  { path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
+  { path: 'perfil/:nombreUsuario', component: PerfilComponent },
+  { path: 'perfil', component: MiPerfilComponent },
+  { path: 'amigos', component: AmigosComponent }
 
 ];
 

@@ -1,6 +1,6 @@
 export class JwtDTO {
-    token: string; 
+    token: string;
     constructor(token: string) {
         this.token = token;
-    }   
+    }
 }

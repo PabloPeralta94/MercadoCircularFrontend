@@ -1,4 +1,4 @@
 export interface FriendRequestDTO {
-    id: number;
-    nombreUsuario: string;
-  }
+  id: number;
+  nombreUsuario: string;
+}

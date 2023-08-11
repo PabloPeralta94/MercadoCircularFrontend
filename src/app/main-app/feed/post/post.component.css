@@ -16,7 +16,7 @@
 }
 
 .card-footer {
-    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 4px;
     margin-top: 10px;

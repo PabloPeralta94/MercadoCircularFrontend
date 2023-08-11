@@ -7,13 +7,13 @@ import { TokenService } from '../services/token.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  
+
   nombreUsuario: string;
 
   constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
-    this.nombreUsuario = this.tokenService.getUserName();  
+    this.nombreUsuario = this.tokenService.getUserName();
   }
 
 }

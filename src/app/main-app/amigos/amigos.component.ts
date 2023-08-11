@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FriendDTO } from 'src/app/interfaces/friend-dto';
 import { FriendService } from 'src/app/services/friend.service';
 
@@ -11,7 +11,7 @@ import { FriendService } from 'src/app/services/friend.service';
 export class AmigosComponent implements OnInit {
   friends: FriendDTO[] = [];
 
-  constructor(private friendService: FriendService) {}
+  constructor(private friendService: FriendService) { }
 
   ngOnInit(): void {
     this.getMyFriends();
