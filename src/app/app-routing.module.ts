@@ -12,6 +12,8 @@ import { FeedComponent } from './main-app/feed/feed.component';
 import { PerfilComponent } from './main-app/perfil/perfil.component';
 import { MiPerfilComponent } from './main-app/perfil/mi-perfil/mi-perfil.component';
 import { AmigosComponent } from './main-app/amigos/amigos.component';
+import { MarketComponent } from './main-app/feed/market/market/market.component';
+import { AgregarEquipoComponent } from './main-app/feed/market/agregar-equipo/agregar-equipo.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, canActivate: [LoginGuard] },
@@ -21,7 +23,9 @@ const routes: Routes = [
   { path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
   { path: 'perfil/:nombreUsuario', component: PerfilComponent },
   { path: 'perfil', component: MiPerfilComponent },
-  { path: 'amigos', component: AmigosComponent }
+  { path: 'amigos', component: AmigosComponent },
+  {path: 'market', component: MarketComponent},
+  {path: 'agregar', component: AgregarEquipoComponent}
 
 ];
 

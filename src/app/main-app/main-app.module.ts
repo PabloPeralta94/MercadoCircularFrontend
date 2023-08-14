@@ -14,6 +14,8 @@ import { BarraLatIzqComponent } from './feed/barra-lat-izq/barra-lat-izq.compone
 import { UserPostComponent } from './feed/user-post/user-post.component';
 import { MiPerfilComponent } from './perfil/mi-perfil/mi-perfil.component';
 import { SolicitudesComponent } from './amigos/solicitudes/solicitudes.component';
+import { MarketComponent } from './feed/market/market/market.component';
+import { AgregarEquipoComponent } from './feed/market/agregar-equipo/agregar-equipo.component';
 
 
 
@@ -30,6 +32,8 @@ import { SolicitudesComponent } from './amigos/solicitudes/solicitudes.component
     UserPostComponent,
     MiPerfilComponent,
     SolicitudesComponent,
+    MarketComponent,
+    AgregarEquipoComponent,
   ],
   imports: [
     CommonModule,

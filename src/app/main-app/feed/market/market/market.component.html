@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <h2>Fishing Gear Market</h2>
+    <hr>
+  
+    <div class="row">
+      <!-- Loop through the list of fishing gear and display each as a card -->
+      <div class="col-md-4 mb-4" *ngFor="let gear of fishingGearList">
+        <div class="card">
+          <img class="card-img-top" src="placeholder_image_url" alt="Fishing Gear">
+          <div class="card-body">
+            <h5 class="card-title">{{ gear.name }}</h5>
+            <p class="card-text">{{ gear.description }}</p>
+            <p class="card-text"><strong>Price:</strong> ${{ gear.price }}</p>
+            <p class="card-text"><strong>Type:</strong> {{ gear.isReel ? 'Reel' : 'Rod' }}</p>
+            <p class="card-text"><strong>Model:</strong> {{ gear.model }}</p>
+            <p class="card-text"><strong>Time of Usage:</strong> {{ gear.timeOfUsage }}</p>
+            <!-- Add buttons for interactions, e.g., edit and delete -->
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

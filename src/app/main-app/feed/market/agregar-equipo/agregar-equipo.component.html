@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <h2>Add Fishing Gear</h2>
+    <hr>
+  
+    <form #gearForm="ngForm" (ngSubmit)="onSubmit(gearForm)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="newGear.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" [(ngModel)]="newGear.description" name="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" [(ngModel)]="newGear.price" name="price" required>
+      </div>
+      <div class="form-group">
+        <label for="isReel">Type</label>
+        <select class="form-control" id="isReel" [(ngModel)]="newGear.isReel" name="isReel" required>
+          <option value="true">Reel</option>
+          <option value="false">Rod</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="model">Model</label>
+        <input type="text" class="form-control" id="model" [(ngModel)]="newGear.model" name="model" required>
+      </div>
+      <div class="form-group">
+        <label for="timeOfUsage">Time of Usage</label>
+        <select class="form-control" id="timeOfUsage" [(ngModel)]="newGear.timeOfUsage" name="timeOfUsage" required>
+          <option value="New">New</option>
+          <option value="Used">Used</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Gear</button>
+    </form>
+  </div>
+  
