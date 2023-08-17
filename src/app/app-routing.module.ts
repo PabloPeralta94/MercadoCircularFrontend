@@ -21,9 +21,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
   { path: 'registro', component: RegistroComponent, canActivate: [LoginGuard] },
   { path: 'empleado', component: PantallaEmpleadosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
-  { path: 'perfil/:nombreUsuario', component: PerfilComponent },
-  { path: 'perfil', component: MiPerfilComponent },
-  { path: 'amigos', component: AmigosComponent },
+  { path: 'perfil/:nombreUsuario', component: PerfilComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
+  { path: 'perfil', component: MiPerfilComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
+  { path: 'amigos', component: AmigosComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
   {path: 'market', component: MarketComponent},
   {path: 'agregar', component: AgregarEquipoComponent}
 
