@@ -3,6 +3,8 @@ import { FishingGear } from 'src/app/interfaces/fishing-gear';
 import { FishingGearService } from 'src/app/services/fishing-gear.service';
 import { TokenService } from 'src/app/services/token.service';
 
+
+
 @Component({
   selector: 'app-market',
   templateUrl: './market.component.html',
@@ -14,7 +16,8 @@ export class MarketComponent implements OnInit {
 
   constructor(
     private fishingGearService: FishingGearService,
-    private tokenService: TokenService
+    private tokenService: TokenService 
+    
   ) {}
 
   ngOnInit() {
