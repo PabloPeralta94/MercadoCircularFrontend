@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InicioComponent } from './inicio/inicio.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FeedComponent } from './feed/feed.component';
 import { AmigosComponent } from './amigos/amigos.component';
-import { ChatComponent } from './chat/chat.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { PostComponent } from './feed/post/post.component';
@@ -20,12 +18,10 @@ import { AgregarEquipoComponent } from './feed/market/agregar-equipo/agregar-equ
 
 
 @NgModule({
-  declarations: [
-    InicioComponent,
+  declarations: [    
     PerfilComponent,
     FeedComponent,
-    AmigosComponent,
-    ChatComponent,
+    AmigosComponent,    
     PostComponent,
     CrearPostComponent,
     BarraLatIzqComponent,

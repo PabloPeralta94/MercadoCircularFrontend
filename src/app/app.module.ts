@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingModule } from './landing/landing.module';
 import { AuthModule } from './auth/auth.module';
-import { EmpleadosModule } from './empleados/empleados.module';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { interceptorProvider } from './interceptors/emp-interceptor.service';
@@ -23,8 +22,7 @@ import { MainAppModule } from './main-app/main-app.module';
     HttpClientModule,    
     FormsModule,
     LandingModule,
-    AuthModule,
-    EmpleadosModule,
+    AuthModule,    
     SharedModule,
     FontAwesomeModule,
     MainAppModule    
